@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.1.RELEASE</version>
+    </parent>
+
+    <groupId>org.sukerin</groupId>
+    <artifactId>sukerin-bus</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>sukerin-common</module>
+        <module>sukerin-auth-spring-boot-starter</module>
+        <module>sukerin-auth</module>
+        <module>sukerin-api</module>
+
+    </modules>
+
+    <properties>
+        <fastjson.version>1.2.70</fastjson.version>
+        <swagger.version>2.9.2</swagger.version>
+        <mybatisplus.version>3.3.2</mybatisplus.version>
+        <druid.version> 1.1.23</druid.version>
+        <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
+        <graphql-java.version>11.0</graphql-java.version>
+        <graphql-java-spring-boot.version>1.0</graphql-java-spring-boot.version>
+        <sukerin.version>0.0.1-SNAPSHOT</sukerin.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.sukerin</groupId>
+                <artifactId>sukerin-common</artifactId>
+                <version>${sukerin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.sukerin</groupId>
+                <artifactId>sukerin-auth-spring-boot-starter</artifactId>
+                <version>${sukerin.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Swagger2-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.baomidou</groupId>
+                        <artifactId>mybatis-plus-generator</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatisplus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphql-java</artifactId>
+                <version>${graphql-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphql-java-spring-boot-starter-webmvc</artifactId>
+                <version>${graphql-java-spring-boot.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+</project>

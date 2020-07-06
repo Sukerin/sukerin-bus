@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sukerin-common" />
+        <module name="sukerin-auth" />
+        <module name="sukerin-api" />
+        <module name="sukerin-auth-spring-boot-starter" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sukerin-api" options="-parameters" />
+      <module name="sukerin-auth" options="-parameters" />
+      <module name="sukerin-auth-spring-boot-starter" options="-parameters" />
+      <module name="sukerin-bus" options="-parameters" />
+      <module name="sukerin-common" options="-parameters" />
+    </option>
+  </component>
+</project>
