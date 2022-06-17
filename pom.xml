@@ -23,7 +23,7 @@
     </modules>
 
     <properties>
-        <fastjson.version>1.2.70</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <swagger.version>2.9.2</swagger.version>
         <mybatisplus.version>3.3.2</mybatisplus.version>
         <druid.version> 1.1.23</druid.version>
