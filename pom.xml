@@ -28,7 +28,7 @@
         <mybatisplus.version>3.3.2</mybatisplus.version>
         <druid.version> 1.1.23</druid.version>
         <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
-        <graphql-java.version>11.0</graphql-java.version>
+        <graphql-java.version>17.4</graphql-java.version>
         <graphql-java-spring-boot.version>1.0</graphql-java-spring-boot.version>
         <sukerin.version>0.0.1-SNAPSHOT</sukerin.version>
     </properties>
